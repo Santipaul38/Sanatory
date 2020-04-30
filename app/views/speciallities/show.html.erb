@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @speciallity.name %>
+</p>
+
+<p>
+  <strong>Charge:</strong>
+  <%= @speciallity.charge %>
+</p>
+
+<%= link_to 'Edit', edit_speciallity_path(@speciallity) %> |
+<%= link_to 'Back', speciallities_path %>

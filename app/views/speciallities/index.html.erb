@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Specialities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Charge</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @speciallities.each do |speciallity| %>
+      <tr>
+        <td><%= speciallity.name %></td>
+        <td><%= speciallity.charge %></td>
+        <td><%= link_to 'Show', speciallity %></td>
+        <td><%= link_to 'Edit', edit_speciallity_path(speciallity) %></td>
+        <td><%= link_to 'Destroy', speciallity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Speciallity', new_speciallity_path %>
+<br>
+<strong> <%= link_to "Back", welcome_index_path %> </strong>
