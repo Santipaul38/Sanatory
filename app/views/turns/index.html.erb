@@ -2,6 +2,19 @@
 
 <h1>Turns</h1>
 
+<h3>Medics: </h3>
+<% Medic.all.each_with_index do |b, index| %>
+  <%= link_to b.name, turns_path(:medic_id => b.id) %>
+  <% if (index) != Medic.all.count %>
+    <strong>|</strong>
+  <% end -%>
+<% end -%>
+
+<%= link_to "Clear", turns_path(:medic_id => nil) %>
+
+<br>
+<br>
+
 <table>
   <thead>
     <tr>
